@@ -1,0 +1,14 @@
+name: "Locality Checker"
+
+on: [ "push" ]
+
+jobs:
+  Build:
+    uses: "player-wallet/infrastructure/.github/workflows/docker-build.yml@master"
+    permissions:
+      contents: read
+      packages: write
+    secrets: "inherit"
+    with:
+      path: "locality-checker"
+      tag: "player-wallet/cockroachdb-k8s-locality-checker"
