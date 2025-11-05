@@ -4,7 +4,7 @@ on: [ "push" ]
 
 jobs:
   Build:
-    uses: "player-wallet/infrastructure/.github/workflows/docker-build.yml@master"
+    uses: "./.github/workflows/docker-build.yml"
     permissions:
       contents: read
       packages: write
